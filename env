@@ -1,0 +1,10 @@
+# this is sample env file
+
+SMTP_SERVER=smtp.gmail.com
+PORT=587
+USERNAME=username@gmail.com
+PASSWORD=gmail_app_password
+MONGO_URI=your_mongo_uri
+DATABASE_NAME=db_name #optional
+USERS_COLLECTION=collections_name #optional
+TEST_EMAILS=testemail1, testemail2, testemail3 #testing purpose only

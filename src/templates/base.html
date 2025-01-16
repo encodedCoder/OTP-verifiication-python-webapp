@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}IIT Connect{% endblock %}</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header class="bg-primary text-white text-center py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <a href="/" class="text-white d-flex align-items-center">
+              <img
+                src="{{ url_for('static', filename='logo.png') }}"
+                alt="IIT Connect Logo"
+                height="50"
+              />
+              <span class="h4 ml-2">IIT Connect</span>
+            </a>
+            <nav>
+              <a href="/" class="text-white mx-2">Home</a>
+              <a href="/dashboard" class="text-white mx-2">Dashboard</a>
+              <a href="/logout" class="text-white mx-2">Logout</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container mt-4">{% block content %}{% endblock %}</main>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <div class="container">
+        <p>&copy; <span id="year"></span> IIT Connect. All rights reserved.</p>
+        <script>
+          document.getElementById("year").textContent =
+            new Date().getFullYear();
+        </script>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
